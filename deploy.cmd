@@ -92,14 +92,14 @@ SET EXTERNAL_REPO_URL=NULL
 SET EXTERNAL_REPO_BRANCH=NULL
 
 echo -----------------------------------------------------------
-SET REPO_NAME=temp-test-web-azure-slot-sync-site1
+SET REPO_NAME=Site1Test
 SET EXTERNAL_REPO_URL = https://github.com/MiguelFernandez/Site1Test.git
 SET NEXT_GOTO_LABEL=pull_temp-test-web-azure-slot-sync-site2
 GOTO clone_or_pull
 
 :pull_temp-test-web-azure-slot-sync-site2
 echo -----------------------------------------------------------
-SET REPO_NAME=temp-test-web-azure-slot-sync-site2
+SET REPO_NAME=TestSite2
 SET EXTERNAL_REPO_URL = https://github.com/MiguelFernandez/TestSite2.git
 SET NEXT_GOTO_LABEL=deploy_temp-test-web-azure-slot-sync-root
 GOTO clone_or_pull
@@ -112,13 +112,13 @@ echo -----------------------------------------------------------
 :: NEXT_MANIFEST_PATH configured by Azure
 :: PREVIOUS_MANIFEST_PATH configured by Azure
 
-SET REPO_NAME=temp-test-web-azure-slot-sync-root
+SET REPO_NAME=RootTest
 SET DEPLOYMENT_TARGET=%SITEFOLDER%\wwwroot
 SET NEXT_GOTO_LABEL=deploy_temp-test-web-azure-slot-sync-site1
 GOTO basic_deployment
 
 :deploy_temp-test-web-azure-slot-sync-site1
-SET REPO_NAME=temp-test-web-azure-slot-sync-site1
+SET REPO_NAME=Site1Test
 echo -----------------------------------------------------------
 SET DEPLOYMENT_TARGET=%SITEFOLDER%\wwwroot\%REPO_NAME%
 SET DEPLOYMENT_SOURCE=%SITEFOLDER%\%REPO_NAME%
@@ -127,7 +127,7 @@ GOTO basic_deployment
 
 :deploy_temp-test-web-azure-slot-sync-site2
 echo -----------------------------------------------------------
-SET REPO_NAME=temp-test-web-azure-slot-sync-site2
+SET REPO_NAME=TestSite2
 SET DEPLOYMENT_TARGET=%SITEFOLDER%\wwwroot\%REPO_NAME%
 SET DEPLOYMENT_SOURCE=%SITEFOLDER%\%REPO_NAME%
 SET NEXT_GOTO_LABEL=end
