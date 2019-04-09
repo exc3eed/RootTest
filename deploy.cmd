@@ -112,7 +112,7 @@ echo -----------------------------------------------------------
 :: NEXT_MANIFEST_PATH configured by Azure
 :: PREVIOUS_MANIFEST_PATH configured by Azure
 
-SET REPO_NAME=test-app-root
+SET REPO_NAME=RootTest
 SET DEPLOYMENT_TARGET=%SITEFOLDER%\wwwroot
 SET NEXT_GOTO_LABEL=deploy_temp-test-web-azure-slot-sync-site1
 GOTO basic_deployment
@@ -142,7 +142,7 @@ GOTO basic_deployment
         SET EXTERNAL_REPO_URL=NULL
     ) ELSE (
         SET LOGFILE_URL=%EXTERNAL_REPO_URL%
-        SET REPO_URL=https://github.com/MiguelFernandez/RootTest.git
+        SET REPO_URL= https://github.com/MiguelFernandez/%REPO_NAME%.git
     )
     IF %EXTERNAL_REPO_BRANCH% NEQ NULL (
         SET DEPLOY_BRANCH=%EXTERNAL_REPO_BRANCH%
