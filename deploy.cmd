@@ -93,14 +93,14 @@ SET EXTERNAL_REPO_BRANCH=NULL
 
 echo -----------------------------------------------------------
 SET REPO_NAME=temp-test-web-azure-slot-sync-site1
-SET EXTERNAL_REPO_URL = https://%migueluser%:%miguelpw%@admin.coastalscience.noaa.gov/git/temp-test-web-azure-slot-sync-site1.git
+SET EXTERNAL_REPO_URL = https://github.com/MiguelFernandez/Site1Test.git
 SET NEXT_GOTO_LABEL=pull_temp-test-web-azure-slot-sync-site2
 GOTO clone_or_pull
 
 :pull_temp-test-web-azure-slot-sync-site2
 echo -----------------------------------------------------------
 SET REPO_NAME=temp-test-web-azure-slot-sync-site2
-SET EXTERNAL_REPO_URL = https://%migueluser%:%miguelpw%@admin.coastalscience.noaa.gov/git/temp-test-web-azure-slot-sync-site2.git
+SET EXTERNAL_REPO_URL = https://github.com/MiguelFernandez/TestSite2.git
 SET NEXT_GOTO_LABEL=deploy_temp-test-web-azure-slot-sync-root
 GOTO clone_or_pull
 
@@ -142,7 +142,7 @@ GOTO basic_deployment
         SET EXTERNAL_REPO_URL=NULL
     ) ELSE (
         SET LOGFILE_URL=%EXTERNAL_REPO_URL%
-        SET REPO_URL=https://%GitUserName%:%GitPassword%@admin.coastalscience.noaa.gov/git/%REPO_NAME%.git
+        SET REPO_URL=https://github.com/MiguelFernandez/RootTest.git
     )
     IF %EXTERNAL_REPO_BRANCH% NEQ NULL (
         SET DEPLOY_BRANCH=%EXTERNAL_REPO_BRANCH%
