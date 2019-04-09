@@ -112,7 +112,7 @@ echo -----------------------------------------------------------
 :: NEXT_MANIFEST_PATH configured by Azure
 :: PREVIOUS_MANIFEST_PATH configured by Azure
 
-SET REPO_NAME=RootTest
+SET REPO_NAME=test-app-root
 SET DEPLOYMENT_TARGET=%SITEFOLDER%\wwwroot
 SET NEXT_GOTO_LABEL=deploy_temp-test-web-azure-slot-sync-site1
 GOTO basic_deployment
