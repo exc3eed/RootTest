@@ -93,14 +93,14 @@ SET EXTERNAL_REPO_BRANCH=NULL
 
 echo -----------------------------------------------------------
 SET REPO_NAME=Site1Test
-SET EXTERNAL_REPO_URL = https://github.com/MiguelFernandez/Site1Test.git
+SET EXTERNAL_REPO_URL = https://github.com/exc3eed/Site1Test.git
 SET NEXT_GOTO_LABEL=pull_temp-test-web-azure-slot-sync-site2
 GOTO clone_or_pull
 
 :pull_temp-test-web-azure-slot-sync-site2
 echo -----------------------------------------------------------
 SET REPO_NAME=TestSite2
-SET EXTERNAL_REPO_URL = https://github.com/MiguelFernandez/TestSite2.git
+SET EXTERNAL_REPO_URL = https://github.com/exc3eed/TestSite2.git
 SET NEXT_GOTO_LABEL=deploy_temp-test-web-azure-slot-sync-root
 GOTO clone_or_pull
 
