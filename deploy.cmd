@@ -142,7 +142,7 @@ GOTO basic_deployment
         SET EXTERNAL_REPO_URL=NULL
     ) ELSE (
         SET LOGFILE_URL=%EXTERNAL_REPO_URL%
-        SET REPO_URL= https://github.com/MiguelFernandez/%REPO_NAME%.git
+        SET REPO_URL= https://github.com/exc3eed/%REPO_NAME%.git
     )
     IF %EXTERNAL_REPO_BRANCH% NEQ NULL (
         SET DEPLOY_BRANCH=%EXTERNAL_REPO_BRANCH%
